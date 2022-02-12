@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+   
+  </head>
+  <body>
+    <h1>Hello there!</h1>
+    <a href="index.html">1. Promises</a><br>
+    <a href="me.html">2. Generators and Async Functions</a>
+    
+  </body>
+  <script>
+  //    GENERATOR
+function* generator(){
+  for(let i=1; ;  i++){
+    yield(i)
+  }
+}
+const gen = generator()
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+
+
+//    ASYNC FUNCTIONS.
+
+const asy = async () =>{
+  const car1 = await new Promise ((resolve) => {
+    setTimeout(()=>{
+      resolve("TOYOTA LAND CRUISER 300")
+    })
+  });
+  
+  const car2 = await new Promise ((resolve) => {
+    setTimeout(()=>{
+      resolve("CHEVROLET SUBURBAN")
+    })
+  });
+  console.log("car:1,",car1);
+  console.log("car:2,",car2);
+}
+asy();
+  </script>
+</html>

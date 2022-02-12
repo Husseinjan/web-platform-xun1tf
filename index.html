@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+   
+  </head>
+  <body>
+  
+    <a href="index.html">1. Promises</a>,<br class="">
+    <a href="me.html">2. Generators and Async Functions</a>
+    
+  </body>
+  <script>
+  //  PROMISES
+const promise1 = new Promise((resolve, reject) =>{
+    setTimeout(()=>{
+        reject("i'm sorry its error promise");
+    },1000);
+});
+
+const promise2 = new Promise((resolve, reject) =>{
+    setTimeout(()=>{
+        resolve("its all right");
+    },2000);
+});
+
+promise1.then(response1 =>{
+    console.log("oshibka", response1);
+}).catch(err =>{
+    console.log("ooo shet",err); 
+})
+
+
+promise2.then(response2 =>{
+    console.log("pravilno", response2);  
+}).catch(err =>{
+    console.log("correct",err);
+})
+  </script>
+</html>
